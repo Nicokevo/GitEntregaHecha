@@ -6,92 +6,131 @@ html {
 
 body {
   font-family: 'Lora', serif;
-  background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 600px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  background-image: linear-gradient(#7da061, #bdbaba);
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: url(../utils/img/santojanni.jpg);
+  width: 100%;
+  opacity: 1.5;
+  filter: alpha(opacity=100);
+  zoom: 1;
+
+  background-size:cover ;
+  
+  
+ 
 }
 
 header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white));
-  background-image: linear-gradient(white, white);
+
   width: 100%;
   height: 100px;
-  padding: 10px;
+  padding: 80px;
   height: 300px;
-  position: fixed;
+  position: relative;
   left: 0;
   top: 0;
   right: 0;
   z-index: index -1;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+
+ 
+  
+  
+  
 }
 
+
+
+
+
+
+
+
 header nav .flexMenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
+
+
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
+
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
+  
           align-items: center;
   list-style: none;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
+ 
           justify-content: space-evenly;
   padding: 4px;
   font-size: 2.2rem;
+  position: absolute;
+height: 52px;
+left: 16px;
+right: 16px;
+top: 176px;
+margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+ 
+  opacity: 1.5;
+  filter: alpha(opacity=100);
+  zoom: 1;
+
+  background-size:cover ;
 }
 
 .flexMenu li a {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
   padding: 20px;
+  border: 3px solid #fffafa;
+  
 }
 
 .flexMenu li a:hover {
-  background-color: white;
+
   color: black;
   padding: 15px;
-  border-bottom: groove;
+  border-bottom:groove;
+  border: 3px solid #fffafa;
+  
+  
 }
 
 header nav .flexMenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
+
+
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
+  
+  
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
+  
+      
           align-items: center;
   list-style: none;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
+ 
+      
           justify-content: space-evenly;
   padding: 40px;
   font-size: 5 rem;
+  
 }
+
+
 
 /**Indicamos que cuando se posicione sobre un elemento li, si contiene un elemento con una clase .submenu, se aplicará el display: block**/
 .menu li:hover > .submenu {
   display: block;
+
+  
+  
 }
 
 /**Damos estilos al submenu y lo ocultamos con display none**/
 .submenu {
   list-style: none;
   display: block;
-  color: #2e5144;
+  color: #ffffff;
   display: none;
 }
 
@@ -103,122 +142,67 @@ header nav .flexMenu {
 
 .submenu li a:hover {
   border-bottom: 1px solid #7da061;
+  
 }
 
-/*Grilla */
-.grid-container {
-  display: -ms-grid;
-  display: grid;
-  margin: 100px 0 100px 0;
-  -ms-grid-columns: (25%)[4];
-      grid-template-columns: repeat(4, 25%);
-  -ms-grid-rows: (200px)[3];
-      grid-template-rows: repeat(3, 200px);
-  gap: 1px 1px;
-  text-align: center;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
-  font-size: 1.5rem;
-      grid-template-areas: "bannerUno bannerUno bannerUno bannerUno" "noticiaDos noticiaDos noticiaTres noticiaCuatro" "noticiaCinco noticiaSeis noticiaSiete noticiaCuatro";
-}
 
-.bannerUno {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-area: bannerUno;
-  background-color: #989579;
-}
 
-.noticiaTres {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  grid-area: noticiaTres;
-  background-color: #b7b49b;
-}
 
-.noticiaDos {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: noticiaDos;
-  background-color: #2e5144;
-}
 
-.noticiaCuatro {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 4;
-  grid-area: noticiaCuatro;
-  background-color: #b7b49b;
-}
-
-.noticiaCinco {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: noticiaCinco;
-  background-color: #2e5144;
-}
-
-.noticiaSeis {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: noticiaSeis;
-  background-color: #2e5144;
-}
-
-.noticiaSiete {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  grid-area: noticiaSiete;
-  background-color: #0e0d0d;
-}
 
 .contenedor {
   max-width: 1000px;
   width: 90%;
   margin: 0 auto;
+  
+
 }
 
 .tarjeta {
-  background-color: #7da061;
+
+ 
+  border: 0px solid rgb(255, 255, 255);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1px;
   border-radius: 15px;
-  padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
+  padding: 30px;
+  top: 100px;
+ 
+   display:flexbox; 
+  
           align-items: center;
-  position: relative;
-  margin-bottom: 50px;
+  position:relative;
+  margin-bottom: 150px;
+  color: white;
 }
 
 .tarjeta__img {
-  width: 300px;
+  width: 200px;
   height: 180px;
   margin-right: 30px;
+  color: white;
 }
 
 .tarjeta__titulo {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  color: white;
 }
 
 .tarjeta__parrafo {
   line-height: 28px;
   font-size: 4rem;
+  color: white;
 }
 
 .boton {
   height: 60px;
   padding: 20px;
-  background-color: #ececec;
+  background-color: #ffffff;
   display: inline-block;
-  color: seagreen;
-  -webkit-text-decoration: #7da061;
-          text-decoration: #7da061;
+
+  
+          text-decoration: #f5f5f5;
 }
 
 .boton--derecha {
@@ -227,46 +211,80 @@ header nav .flexMenu {
   bottom: -25px;
 }
 
-footer {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#7da061), to(#b7b49b));
-  background-image: linear-gradient(#7da061, #b7b49b);
-  width: 100%;
-  height: 100px;
-  padding: 50px 0 0 0;
+.tarjeta p {
+  color: rgb(64, 186, 48);
 }
 
-footer h5 {
-  font-size: 2rem;
-  font-weight: 900;
-  text-align: center;
-}
+
+
 
 .paraTransicion:hover {
-  -webkit-transition: 3s;
+  
   transition: 3s;
   font-size: 3rem;
 }
+aside  h1{
+  color: #0aa221;
+  border: 0px solid #000000;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 200px;
+   
+}
+aside  {
+  position: absolute;
+  width: 300px;
+  height: 700px;
+  left: 60px;
+  top: 400px;
+  color:#ffffff;
 
-aside p {
-  color: #3f8e01;
+  border: 0px solid #ffffff;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1px;
+ 
+
+
+
+}
+main h1{
+  color:#0aa221;
+  border: 0px solid #000000;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1px;
+}
+main{
+    
+    position: absolute;
+    width: 300px;
+    height: 700px;
+    left: 1550px;
+    top: 400px;
+    color: white;
+   
+    border: 0px solid #ffffff;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1px;
+    
+   
 }
 
 .paraTransicion:hover {
-  -webkit-transition: 3s;
+  
   transition: 3s;
   font-size: 3rem;
 }
 
 .neutro {
-  color: black;
-  font-family: 'Lora', serif;
+  color: rgb(255, 255, 255);
+  font-family:cursive;
   text-align: center;
-  text-decoration: underline;
-  font-size: xx-large;
+  border: 5px groove rgb(255, 255, 255);
+  border-radius: 1px ;
+
 }
 
 .neutra {
-  color: #3f8e01;
+  background-image: linear-gradient(#7da061, #b7b49b);
 }
 
 .carrusel {
@@ -274,16 +292,12 @@ aside p {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  
 }
 
-.peque img {
-  width: 700px;
-  margin-right: auto;
-  margin-left: auto;
-}
 
 .paraTransicion:hover {
-  -webkit-transition: 3s;
+  
   transition: 3s;
   font-size: 3rem;
 }
@@ -293,21 +307,27 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 40%;
+  
 }
 
-/* Cuadrado */
-div.contenedor {
-  position: absolute;
-  width: 292.84px;
-  height: 258.71px;
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-shadow: 7px 10px 8px rgba(0, 0, 0, 0.25);
-          box-shadow: 7px 10px 8px rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+.tamaños{
+  border-top: solid 2px ;
+   width: 6%;  
+    text-align: center;   padding: 5px;   margin: auto;  
+     margin-bottom: 10vh; }
+    
+
+     footer div{ 
+       width: 70%;
+       border: 1px groove rgb(252, 252, 252);
+       
+       border-radius: 50px;
+      
+     
+     }
+footer h3{
+  text-align: center;
+  color: rgb(255, 255, 255);
+ 
+  
 }
-/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,313 @@
+@charset "UTF-8";
+html {
+  font-size: 80.19%;
+  font-family: 'Lora', serif;
+}
+
+body {
+  font-family: 'Lora', serif;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 600px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white));
+  background-image: linear-gradient(white, white);
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  height: 300px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: index -1;
+}
+
+header nav .flexMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 4px;
+  font-size: 2.2rem;
+}
+
+.flexMenu li a {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+}
+
+.flexMenu li a:hover {
+  background-color: white;
+  color: black;
+  padding: 15px;
+  border-bottom: groove;
+}
+
+header nav .flexMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 40px;
+  font-size: 5 rem;
+}
+
+/**Indicamos que cuando se posicione sobre un elemento li, si contiene un elemento con una clase .submenu, se aplicará el display: block**/
+.menu li:hover > .submenu {
+  display: block;
+}
+
+/**Damos estilos al submenu y lo ocultamos con display none**/
+.submenu {
+  list-style: none;
+  display: block;
+  color: #2e5144;
+  display: none;
+}
+
+/*Damos estilos a los enlaces dentro del submenu*/
+.submenu li {
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+.submenu li a:hover {
+  border-bottom: 1px solid #7da061;
+}
+
+/*Grilla */
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  margin: 100px 0 100px 0;
+  -ms-grid-columns: (25%)[4];
+      grid-template-columns: repeat(4, 25%);
+  -ms-grid-rows: (200px)[3];
+      grid-template-rows: repeat(3, 200px);
+  gap: 1px 1px;
+  text-align: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  font-size: 1.5rem;
+      grid-template-areas: "bannerUno bannerUno bannerUno bannerUno" "noticiaDos noticiaDos noticiaTres noticiaCuatro" "noticiaCinco noticiaSeis noticiaSiete noticiaCuatro";
+}
+
+.bannerUno {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: bannerUno;
+  background-color: #989579;
+}
+
+.noticiaTres {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: noticiaTres;
+  background-color: #b7b49b;
+}
+
+.noticiaDos {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: noticiaDos;
+  background-color: #2e5144;
+}
+
+.noticiaCuatro {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: noticiaCuatro;
+  background-color: #b7b49b;
+}
+
+.noticiaCinco {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: noticiaCinco;
+  background-color: #2e5144;
+}
+
+.noticiaSeis {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: noticiaSeis;
+  background-color: #2e5144;
+}
+
+.noticiaSiete {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: noticiaSiete;
+  background-color: #0e0d0d;
+}
+
+.contenedor {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.tarjeta {
+  background-color: #7da061;
+  border-radius: 15px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.tarjeta__img {
+  width: 300px;
+  height: 180px;
+  margin-right: 30px;
+}
+
+.tarjeta__titulo {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.tarjeta__parrafo {
+  line-height: 28px;
+  font-size: 4rem;
+}
+
+.boton {
+  height: 60px;
+  padding: 20px;
+  background-color: #ececec;
+  display: inline-block;
+  color: seagreen;
+  -webkit-text-decoration: #7da061;
+          text-decoration: #7da061;
+}
+
+.boton--derecha {
+  position: absolute;
+  right: 20px;
+  bottom: -25px;
+}
+
+footer {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7da061), to(#b7b49b));
+  background-image: linear-gradient(#7da061, #b7b49b);
+  width: 100%;
+  height: 100px;
+  padding: 50px 0 0 0;
+}
+
+footer h5 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.paraTransicion:hover {
+  -webkit-transition: 3s;
+  transition: 3s;
+  font-size: 3rem;
+}
+
+aside p {
+  color: #3f8e01;
+}
+
+.paraTransicion:hover {
+  -webkit-transition: 3s;
+  transition: 3s;
+  font-size: 3rem;
+}
+
+.neutro {
+  color: black;
+  font-family: 'Lora', serif;
+  text-align: center;
+  text-decoration: underline;
+  font-size: xx-large;
+}
+
+.neutra {
+  color: #3f8e01;
+}
+
+.carrusel {
+  /*para modificar que no use el 100% de la página*/
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.peque img {
+  width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.paraTransicion:hover {
+  -webkit-transition: 3s;
+  transition: 3s;
+  font-size: 3rem;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+/* Cuadrado */
+div.contenedor {
+  position: absolute;
+  width: 292.84px;
+  height: 258.71px;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 7px 10px 8px rgba(0, 0, 0, 0.25);
+          box-shadow: 7px 10px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+/*# sourceMappingURL=style.css.map */
